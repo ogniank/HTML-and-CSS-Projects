@@ -1,0 +1,22 @@
+table {
+    border: 2px solid silver;
+}
+
+th, td {
+    border: 1px solid silver;
+}
+
+tr, th {
+    background-color: navy;
+    color: gold;
+}
+
+tr, td {
+    background-color: lightblue;
+    color: black;
+}
+
+td:hover {
+    background-color: orange;
+    color: white;
+}

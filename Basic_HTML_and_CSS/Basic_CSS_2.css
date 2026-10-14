@@ -1,0 +1,12 @@
+p {
+    color: snow;
+    background-color: black;
+    font-size: large;
+    text-align: center;
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+    text-shadow: 3px 3px 5px gray;
+}
