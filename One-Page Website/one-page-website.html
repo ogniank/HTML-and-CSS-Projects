@@ -4,83 +4,90 @@
         <title>Ognian's Expert RC Helicopters</title>
         <meta charset="UTF-8">
         <meta name="description" content="My personal RC helicopter hobby page with my helicopters, flight videos, and a way to get in touch.">
+        <link rel="stylesheet" href="CSS/one_page_website.css">
     </head>
     <body>
         <!--NAVBAR-->
-        <nav>
+        <nav class="nav-bar">
             <ul>
-                <a href="#home"><li>HOME</li></a>
-                <a href="#gallery"><li>GALLERY</li></a>
-                <a href="#videos"><li>VIDEOS</li></a>
-                <a href="#contact"><li>CONTACT</li></a>
+                <li><a href="#home">Home</a></li>
+                <li class="drop"><a href="#gallery">Gallery</a>
+                    <div class="rollover-menu">
+                        <a href="#mini">Mini Indoor</a>
+                        <a href="#sport">Sport</a>
+                        <a href="#scale">Scale Rescue</a>
+                    </div>
+                </li>
+                <li class="drop"><a href="#videos">Videos</a>
+                    <div class="rollover-menu">
+                        <a href="#videos">Flight Video</a>
+                    </div>
+                </li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <!--HOME-->
         <header id="home">
-            <div>
-                <h1>Ognian's Expert RC Helicopters</h1>
-                <p>Welcome to my hobby page! I build, fly, and repair remote control helicopters.
-                    What started as one small indoor helicopter has turned into a collection
-                    of models I fly every weekend at the local park.</p>
-                <blockquote>
-                    <p>"Flying an RC helicopter teaches patience. Every crash is a lesson."</p>
-                </blockquote>
-            </div>
+            <h1 class="animate-text">Ognian's Expert RC Helicopters</h1>
+            <p>Welcome to my hobby page! I build, fly, and repair remote control helicopters.
+                What started as one small indoor helicopter has turned into a collection
+                of models I fly every weekend at the local park.</p>
+            <blockquote>
+                <p>"Flying an RC helicopter teaches patience. Every crash is a lesson."</p>
+            </blockquote>
         </header>
         <!--GALLERY-->
         <section id="gallery">
-            <div>
-                <h2>My Helicopters</h2>
-                <div>
-                    <!--MINI HELICOPTER-->
-                    <div>
-                        <h3>Mini Indoor Helicopter</h3>
-                        <img src="images/goosky.jpg" alt="Small red indoor RC helicopter sitting on a table">
-                        <p>My first helicopter. Perfect for learning inside the house.</p>
-                    </div>
-                    <!--SPORT HELICOPTER-->
-                    <div>
-                        <h3>Sport Helicopter</h3>
-                        <img src="images/stratos.jpg" alt="Medium-sized black and yellow RC helicopter on grass">
-                        <p>A faster outdoor model that can do flips and rolls.</p>
-                    </div>
-                    <!--SCALE HELICOPTER-->
-                    <div>
-                        <h3>Scale Rescue Helicopter</h3>
-                        <img src="images/scale.jpg" alt="Large RC helicopter painted like a red and white rescue helicopter">
-                        <p>A detailed model built to look like a real rescue helicopter.</p>
-                    </div>
+            <h2>My Helicopters</h2>
+            <div class="card-container">
+                <!--MINI HELICOPTER-->
+                <div class="heli-card" id="mini">
+                    <img src="images/goosky.jpg" alt="Small indoor RC helicopter">
+                    <h3>Mini Indoor Helicopter</h3>
+                    <p>My first helicopter. Perfect for learning inside the house.</p>
+                </div>
+                <!--SPORT HELICOPTER-->
+                <div class="heli-card" id="sport">
+                    <img src="images/stratos.jpg" alt="Sport RC helicopter on grass">
+                    <h3>Sport Helicopter</h3>
+                    <p>A faster outdoor model that can do flips and rolls.</p>
+                </div>
+                <!--SCALE HELICOPTER-->
+                <div class="heli-card" id="scale">
+                    <img src="images/scale.jpg" alt="Scale RC helicopter built to look like a real rescue helicopter">
+                    <h3>Scale Rescue Helicopter</h3>
+                    <p>A detailed model built to look like a real rescue helicopter.</p>
                 </div>
             </div>
         </section>
         <!--VIDEOS-->
         <section id="videos">
-            <div>
-                <h2>Flight Videos</h2>
-                <iframe width="315" height="560" src="https://www.youtube.com/embed/VBFgarP5kIk"></iframe>
-            </div>
+            <h2>Flight Videos</h2>
+            <iframe width="315" height="560" src="https://www.youtube.com/embed/VBFgarP5kIk"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p class="video-link"><a href="https://www.youtube.com/shorts/VBFgarP5kIk" target="_blank">Watch on YouTube</a></p>
         </section>
         <!--CONTACT-->
         <section id="contact">
-            <div>
-                <h2>Contact Me</h2>
-                <h3>Have a question about RC helicopters? Send me a message!</h3>
-                <form>
-                    <input type="text" placeholder="First Name">
-                    <input type="text" placeholder="Last Name"><br>
-                    <input type="email" placeholder="Email"><br>
-                    <label for="level">Your flying experience:</label>
-                    <select id="level">
-                        <option>Beginner</option>
-                        <option>Intermediate</option>
-                        <option>Expert</option>
-                    </select><br>
+            <h2>Contact Me</h2>
+            <h3>Have a question about RC helicopters? Send me a message!</h3>
+            <form>
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+                <input type="email" placeholder="Email">
+                <label for="level">Your flying experience:</label>
+                <select id="level">
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Expert</option>
+                </select>
+                <div class="checkbox-row">
                     <input type="checkbox" id="Updates">
-                    <label for="Updates">Would you like updates when I post new flight videos?</label><br>
-                    <textarea placeholder="Type message here..."></textarea><br>
-                    <input type="submit" value="Send">
-                </form>
-            </div>
+                    <label for="Updates">Send me updates when new flight videos are posted</label>
+                </div>
+                <textarea placeholder="Type message here..."></textarea>
+                <input type="submit" value="Send">
+            </form>
         </section>
         <!--FOOTER-->
         <footer>
@@ -99,4 +106,4 @@
             </table>
         </footer>
     </body>
-</html>                        
+</html>
