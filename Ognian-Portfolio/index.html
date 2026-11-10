@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!--Personal portfolio of Ognian Kerelski Built with HTML5, CSS3 and Bootstrap 5.X.X -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ognian Kerelski | Software &amp; Web Developer</title>
+    <meta name="description"
+        content="Portfolio of Ognian Kerelski, a Software and Web Developer in training with a background in Mechanical Engineering.">
+
+    <!--Tab icon (images/icon.jpg)-->
+    <link rel="icon" type="image/jpeg" href="images/icon.jpg">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!--Google Fonts: Poppins for regular text, Fira Code for the code-style text-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Poppins:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+
+    <!--My own styles go last so they can override Bootstrap-->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand navbar-dark sticky-top nav-glass">
+        <div class="container">
+            <a class="navbar-brand brand" href="#home"><i class="bi bi-code-slash"></i> OK<span>.dev</span></a>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <!--ms-auto pushes the links to the right. Each href="#..." jumps to the section with that id-->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home"><i class="bi bi-house-door"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about"><i class="bi bi-person"></i> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills"><i class="bi bi-lightning-charge"></i> Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects"><i class="bi bi-kanban"></i> Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><i class="bi bi-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--The welcome area at the top of the page-->
+    <header id="home" class="hero">
+        <!--Two blurred circles that glow behind the content (just decoration)-->
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+
+        <div class="container position-relative">
+            <div class="row align-items-center g-5">
+                <!--Left half: the text. Right half: the picture-->
+                <div class="col-6">
+                    <p class="hello">&lt;hello world /&gt;</p>
+                    <h1 class="hero-title">Hi, I'm <span class="gradient-text">Ognian Kerelski</span></h1>
+                    <h2 class="hero-sub">Software &amp; Web Developer in the making</h2>
+                    <p class="hero-text">Mechanical Engineer turned coder. I build clean, colorful and responsive websites
+                        with HTML, CSS, JavaScript and Bootstrap.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#projects" class="btn btn-glow"><i class="bi bi-rocket-takeoff"></i> View My Work</a>
+                        <a href="#contact" class="btn btn-outline-glow"><i class="bi bi-chat-dots"></i> Contact Me</a>
+                    </div>
+                </div>
+
+                <!--Code editor picture (images/profile-code.jpg). Width and height stop the page from jumping while it loads-->
+                <div class="col-6">
+                    <img src="images/profile-code.jpg" width="1280" height="840" class="img-fluid hero-img"
+                        alt="Code editor window showing a developer profile written in JavaScript">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--ABOUT-->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title"><i class="bi bi-person-badge"></i> About Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <div class="glass-card about-card">
+                        <p class="lead-text">
+                            Hello, my name is <strong>Ognian Kerelski</strong>. My educational background is in
+                            Mechanical Engineering but computers have always fascinated me. For this reason, I am
+                            currently enrolled in the studies of becoming a Software and Web Developer. I am a father of
+                            3 and I love being challenged. I have background knowledge in HTML, CSS, JavaScript, C++, C#
+                            and am on the way to becoming a certified full stack developer through Academy of Learning.
+                            Please contact me if you have any questions about my experience and wide variety of projects
+                            I have completed along the way of my current studies as a Software and Web developer.
+                        </p>
+
+                        <!--Four badges in one row-->
+                        <div class="row text-center g-4 mt-2">
+                            <div class="col-3">
+                                <div class="stat"><i class="bi bi-gear-wide-connected"></i>
+                                    <span>Mechanical Engineering</span></div>
+                            </div>
+                            <div class="col-3">
+                                <div class="stat"><i class="bi bi-mortarboard"></i>
+                                    <span>Full Stack in Progress</span></div>
+                            </div>
+                            <div class="col-3">
+                                <div class="stat"><i class="bi bi-heart"></i>
+                                    <span>Proud Father of 3</span></div>
+                            </div>
+                            <div class="col-3">
+                                <div class="stat"><i class="bi bi-trophy"></i>
+                                    <span>Loves a Challenge</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--SKILLS. All 6 cards in one row. Each card's color comes from its own class in style.css-->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title"><i class="bi bi-lightning-charge"></i> Skills</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-2">
+                    <div class="skill-card skill-html"><i class="bi bi-filetype-html"></i>
+                        <h3>HTML5</h3>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="skill-card skill-css"><i class="bi bi-filetype-css"></i>
+                        <h3>CSS3</h3>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="skill-card skill-js"><i class="bi bi-filetype-js"></i>
+                        <h3>JavaScript</h3>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="skill-card skill-bs"><i class="bi bi-bootstrap"></i>
+                        <h3>Bootstrap</h3>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="skill-card skill-cpp"><i class="bi bi-cpu"></i>
+                        <h3>C++</h3>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="skill-card skill-cs"><i class="bi bi-hash"></i>
+                        <h3>C#</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5 tools">
+                <span><i class="bi bi-git"></i> Git</span>
+                <span><i class="bi bi-github"></i> GitHub</span>
+                <span><i class="bi bi-code-square"></i> VS Code</span>
+                <span><i class="bi bi-phone"></i> Responsive Design</span>
+            </div>
+        </div>
+    </section>
+
+    <!--PROJECTS-->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title"><i class="bi bi-kanban"></i> Projects</h2>
+            <div class="row g-4">
+                <div class="col-4">
+                    <div class="project-card">
+                        <img src="images/cinemas.jpg" width="1280" height="840" loading="lazy" class="img-fluid"
+                            alt="Bootstrap code from the Academy Cinemas website">
+                        <div class="project-body">
+                            <h3>Academy Cinemas</h3>
+                            <p>A responsive movie theater website with a dropdown navbar, movie cards, show times,
+                                a ticket form and a grid footer.</p>
+                            <div class="tags"><span>Bootstrap</span><span>CSS Variables</span><span>Media Queries</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="project-card">
+                        <img src="images/recipes.jpg" width="1280" height="840" loading="lazy" class="img-fluid"
+                            alt="CSS code from the Simple Recipes website">
+                        <div class="project-body">
+                            <h3>Simple Recipes</h3>
+                            <p>A recipe website with a sticky navbar, a CSS-only dropdown menu, recipe cards and a
+                                contact form.</p>
+                            <div class="tags"><span>HTML</span><span>CSS</span><span>Dropdowns</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="project-card">
+                        <img src="images/pet-shop.jpg" width="1280" height="840" loading="lazy" class="img-fluid"
+                            alt="HTML and CSS code from The Pet Shop website">
+                        <div class="project-body">
+                            <h3>The Pet Shop</h3>
+                            <p>A two-page pet store website with image overlays, bookmark navigation, an embedded video
+                                and a styled contact form.</p>
+                            <div class="tags"><span>HTML</span><span>CSS</span><span>Animations</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="project-card">
+                        <img src="images/css-effects.jpg" width="1280" height="840" loading="lazy" class="img-fluid"
+                            alt="CSS keyframe animation code">
+                        <div class="project-body">
+                            <h3>Creating Effects with CSS</h3>
+                            <p>A gallery showcasing hover overlays, zoom effects and a keyframe "burst" animation.</p>
+                            <div class="tags"><span>Keyframes</span><span>Transforms</span><span>Hover</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="project-card">
+                        <img src="images/rc-heli.jpg" width="1280" height="840" loading="lazy" class="img-fluid"
+                            alt="HTML code from the RC helicopter one-page website">
+                        <div class="project-body">
+                            <h3>Expert RC Helicopters</h3>
+                            <p>A one-page hobby website with dropdown navigation, a helicopter gallery, a flight video
+                                and a contact form.</p>
+                            <div class="tags"><span>One Page</span><span>Flexbox</span><span>Forms</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Placeholder card until more projects are added-->
+                <div class="col-4">
+                    <div class="project-card more-card">
+                        <i class="bi bi-plus-circle-dotted"></i>
+                        <h3>More Coming Soon</h3>
+                        <p>JavaScript, C# and full stack projects are on the way as I continue my studies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--CONTACT-->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title"><i class="bi bi-envelope-heart"></i> Contact Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <div class="glass-card text-center contact-card">
+                        <p class="lead-text">Have a question about my experience or projects? I'd love to hear from you!</p>
+
+                        <!--mailto: opens the visitor's email app with my address filled in-->
+                        <a href="mailto:ogniank@outlook.com" class="btn btn-glow btn-lg email-btn">
+                            <i class="bi bi-envelope-fill"></i> ogniank@outlook.com
+                        </a>
+                        <!--target="_blank" opens GitHub in a new tab-->
+                        <a href="https://github.com/ogniank" target="_blank" class="btn btn-outline-glow btn-lg email-btn ms-2">
+                            <i class="bi bi-github"></i> github.com/ogniank
+                        </a>
+
+                        <!--aria-label gives icon-only links a name for screen readers-->
+                        <div class="socials mt-4">
+                            <a href="https://github.com/ogniank" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                            <a href="mailto:ogniank@outlook.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                            <a href="#home" aria-label="Back to top"><i class="bi bi-arrow-up-circle"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--FOOTER: three columns side by side-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center g-3">
+                <div class="col-4"><span class="brand"><i class="bi bi-code-slash"></i> OK<span>.dev</span></span></div>
+                <div class="col-4 text-center">&copy; 2026 Ognian Kerelski. All rights reserved.</div>
+                <div class="col-4 text-end">Built with <i class="bi bi-heart-fill text-danger"></i> HTML, CSS &amp; Bootstrap</div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

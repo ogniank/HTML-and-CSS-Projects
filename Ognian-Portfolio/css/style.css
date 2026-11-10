@@ -1,0 +1,386 @@
+/*
+    Portfolio styles - Ognian Kerelski
+    Loaded after Bootstrap, so these rules win when they target the same thing.
+*/
+:root{
+    --bg: #0d0f1f;
+    --bg-alt: #13162b;
+    --text: #e8eaf6;
+    --muted: #a9adc8;
+    --pink: #f107a3;
+    --purple: #7b2ff7;
+    --cyan: #00d4ff;
+    --gradient: linear-gradient(135deg, #7b2ff7, #f107a3, #ff9a44);
+    --main-font: 'Poppins', sans-serif;
+    --code-font: 'Fira Code', monospace;
+}
+
+html{
+    min-width: 1200px; /*Keeps the desktop layout even if the window gets narrower*/
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /*Stops a little early so the sticky navbar doesn't cover section titles*/
+}
+
+body{
+    font-family: var(--main-font);
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+/*Keeps every picture inside its column*/
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*NAVBAR*/
+.nav-glass{
+    background: rgba(13, 15, 31, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); /*Frosted glass: blurs whatever scrolls behind the navbar*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand{
+    font-family: var(--code-font);
+    font-weight: 600;
+    font-size: 24px;
+    color: white;
+}
+
+/*Gradient text trick: paint the background with a gradient, clip it to the
+  shape of the letters, then make the letters transparent so it shows through.
+  The -webkit- lines are needed for Safari Browsers.*/
+.brand span{
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/*!important is needed to beat Bootstrap's navbar-dark link colors*/
+.nav-link{
+    color: var(--muted) !important;
+    font-weight: 400;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover{
+    color: var(--cyan) !important;
+}
+
+
+/*HERO*/
+.hero{
+    position: relative;
+    padding: 120px 0 100px;
+    overflow: hidden; /*Cuts off the parts of the glowing circles that spill out*/
+}
+
+/*The blurred glowing circles behind the hero*/
+.blob{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.45;
+}
+
+.blob-1{
+    width: 400px;
+    height: 400px;
+    background: var(--purple);
+    top: -100px;
+    left: -100px;
+}
+
+.blob-2{
+    width: 350px;
+    height: 350px;
+    background: var(--pink);
+    bottom: -120px;
+    right: -80px;
+}
+
+.hello{
+    font-family: var(--code-font);
+    color: var(--cyan);
+    font-size: 18px;
+}
+
+.hero-title{
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.gradient-text{
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.hero-sub{
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--muted);
+    margin: 15px 0;
+}
+
+.hero-text{
+    font-size: 18px;
+    color: var(--muted);
+    margin-bottom: 30px;
+}
+
+/*The code editor picture (profile-code.jpg) floats gently up and down*/
+.hero-img{
+    height: auto;
+    border-radius: 22px;
+    box-shadow: 0 25px 60px rgba(241, 7, 163, 0.35);
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%, 100%{transform: translateY(0px);}
+    50%{transform: translateY(-15px);}
+}
+
+
+/*BUTTONS*/
+.btn-glow{
+    background: var(--gradient);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 28px;
+    font-weight: 600;
+    box-shadow: 0 8px 25px rgba(241, 7, 163, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*Lifts the button and makes the glow stronger*/
+.btn-glow:hover{
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(241, 7, 163, 0.6);
+}
+
+.btn-outline-glow{
+    border: 2px solid var(--cyan);
+    color: var(--cyan);
+    border-radius: 50px;
+    padding: 10px 26px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-glow:hover{
+    background: var(--cyan);
+    color: var(--bg);
+}
+
+
+/*SHARED SECTION STYLES*/
+.section{
+    padding: 100px 0;
+}
+
+/*Lighter background on every other section so they stand apart*/
+.section-alt{
+    background-color: var(--bg-alt);
+}
+
+.section-title{
+    text-align: center;
+    font-weight: 800;
+    font-size: 44px;
+    margin-bottom: 50px;
+}
+
+.section-title i{
+    color: var(--pink);
+}
+
+/*See-through "glass" card used in About and Contact*/
+.glass-card{
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.lead-text{
+    font-size: 19px;
+    line-height: 1.8;
+    color: var(--text);
+}
+
+
+/*ABOUT BADGES. A flexbox column puts each icon on top of its text*/
+.stat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/*Bootstrap Icons are a font, so font-size and color control them*/
+.stat i{
+    font-size: 36px;
+    color: var(--cyan);
+}
+
+
+/*SKILLS*/
+.skill-card{
+    text-align: center;
+    padding: 30px 10px;
+    border-radius: 20px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+/*Rises and tilts slightly on hover*/
+.skill-card:hover{
+    transform: translateY(-10px) rotate(-2deg);
+}
+
+.skill-card i{
+    font-size: 48px;
+}
+
+.skill-card h3{
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/*Each card uses the official colors of its language*/
+.skill-html{background: linear-gradient(135deg, #e44d26, #f16529);}
+.skill-css{background: linear-gradient(135deg, #1572b6, #33a9dc);}
+.skill-js{background: linear-gradient(135deg, #f0db4f, #e8a317); color: #1c1c1c;}
+.skill-bs{background: linear-gradient(135deg, #7952b3, #a67be0);}
+.skill-cpp{background: linear-gradient(135deg, #00599c, #659ad2);}
+.skill-cs{background: linear-gradient(135deg, #68217a, #9b4dca);}
+
+.tools span{
+    display: inline-block;
+    margin: 6px;
+    padding: 8px 18px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--muted);
+}
+
+
+/*PROJECTS*/
+.project-card{
+    height: 100%; /*Keeps every card in a row the same height*/
+    background: var(--bg-alt);
+    border-radius: 20px;
+    overflow: hidden; /*Rounds the top corners of the picture to match the card*/
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(123, 47, 247, 0.35);
+}
+
+.project-body{
+    padding: 25px;
+}
+
+.project-body h3{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.project-body p{
+    color: var(--muted);
+}
+
+.tags span{
+    display: inline-block;
+    font-family: var(--code-font);
+    font-size: 13px;
+    margin: 4px 4px 0 0;
+    padding: 4px 12px;
+    border-radius: 50px;
+    background: rgba(0, 212, 255, 0.12);
+    color: var(--cyan);
+}
+
+/*"More Coming Soon" card: everything centered inside a dashed border*/
+.more-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    border: 2px dashed rgba(241, 7, 163, 0.5);
+}
+
+.more-card i{
+    font-size: 60px;
+    color: var(--pink);
+}
+
+.more-card p{
+    color: var(--muted);
+}
+
+
+/*CONTACT*/
+.email-btn{
+    margin-top: 15px;
+}
+
+/*inline-block is needed so the scale effect works on links*/
+.socials a{
+    font-size: 32px;
+    color: var(--muted);
+    margin: 0 15px;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socials a:hover{
+    color: var(--pink);
+    transform: scale(1.2);
+}
+
+
+/*FOOTER*/
+.footer{
+    padding: 30px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--muted);
+    font-size: 15px;
+}
+
+
+/*Forvisitors who turned off animations in their device settings*/
+@media (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto;
+    }
+
+    .hero-img{
+        animation: none;
+    }
+
+    .skill-card, .project-card, .btn-glow, .socials a{
+        transition: none;
+    }
+}
