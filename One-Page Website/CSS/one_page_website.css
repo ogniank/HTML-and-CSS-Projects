@@ -1,0 +1,302 @@
+/*Import link for the Roboto and Orbitron fonts from fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Roboto:wght@400;700&display=swap');
+
+html{
+    scroll-behavior: smooth; /*Nav links glide smoothly to
+    each section*/
+    overflow-x: hidden; /*Hides any side to side scroll bar*/
+}
+
+/*TEXT*/
+body{
+    font-family: 'Roboto', sans-serif; /*Font-family for all
+    text on the page*/
+    font-size: 18px; /*Font-size for all text on the page*/
+    line-height: 1.6;
+    background-color: #eef3f8;
+    color: #1f2d3d;
+    margin: 0px;
+}
+
+h1, h2{
+    font-family: 'Orbitron', sans-serif;
+    color: #0b3c5d;
+    text-align: center;
+}
+
+h1{
+    font-size: 46px;
+    margin-bottom: 10px;
+}
+
+h2{
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+h3{
+    font-size: 22px;
+    color: #0b3c5d;
+    text-align: center;
+}
+
+/*Leaves room for the sticky navbar when a section is
+reached with a nav link*/
+section, header, .heli-card{
+    scroll-margin-top: 90px;
+}
+
+/*NAVBAR*/
+.nav-bar{
+    position: sticky; /*Keeps the navbar at the top while
+    scrolling*/
+    top: 0;
+    z-index: 9; /*Keeps the navbar on top of all elements*/
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.nav-bar ul{
+    display: flex; /*Places the nav links side by side*/
+    justify-content: center;
+    align-items: center;
+    list-style-type: none; /*Removes the bullet points*/
+    margin: 0px;
+    padding: 0px;
+    background-color: #0b3c5d;
+    border-bottom: 4px solid #f5a623;
+}
+
+.nav-bar a{
+    display: block; /*Lets the links stack vertically in the
+    dropdown and gives each link its own box*/
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px 28px;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+
+/*Keeps the Gallery or Videos link highlighted while the mouse
+is over its dropdown menu*/
+.nav-bar a:hover, .drop:hover > a{
+    background-color: #f5a623;
+    color: #0b3c5d;
+}
+
+/*DROPDOWN MENUS*/
+.drop{
+    position: relative; /*The dropdown is positioned from this
+    list item*/
+}
+
+.rollover-menu{
+    display: none; /*Hides the dropdown links until the user
+    hovers over the parent link*/
+    position: absolute;
+    min-width: 100%;
+    background-color: white;
+    border-top: 4px solid #f5a623;
+    border-radius: 0px 0px 8px 8px;
+    overflow: hidden;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/*Shows the dropdown when the mouse is over Gallery or Videos*/
+.drop:hover .rollover-menu{
+    display: block;
+    animation: fade-down 0.3s ease-out;
+}
+
+.rollover-menu a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-transform: none;
+    white-space: nowrap;
+    color: #0b3c5d;
+    padding: 14px 24px;
+}
+
+.rollover-menu a:hover{
+    background-color: #328cc1;
+    color: white;
+}
+
+/*Makes the dropdown slide down smoothly when it appears*/
+@keyframes fade-down{
+    0%{opacity: 0; transform: translateY(-10px);}
+    100%{opacity: 1; transform: translateY(0px);}
+}
+
+/*Fades the main heading from light blue to dark blue*/
+@keyframes color-text{
+    0%{color: #9fd3f5;}
+    100%{color: #0b3c5d;}
+}
+
+.animate-text{
+    animation: color-text 3s;
+}
+
+/*HOME*/
+header{
+    padding: 60px 15% 40px 15%;
+    text-align: center;
+    background: linear-gradient(#d7e9f7, #eef3f8);
+}
+
+blockquote{
+    font-style: italic;
+    font-size: 20px;
+    color: #328cc1;
+    margin: 20px auto;
+}
+
+/*GALLERY*/
+#gallery{
+    padding: 40px 5%;
+}
+
+.card-container{
+    display: flex; /*Places the helicopter cards side by side*/
+    flex-wrap: wrap; /*Moves cards to a new row on small screens*/
+    justify-content: center;
+    gap: 30px;
+}
+
+.heli-card{
+    width: 320px;
+    background-color: white;
+    border-radius: 12px;
+    padding-bottom: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*Lifts the card slightly when the mouse is over it*/
+.heli-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.heli-card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /*Fills the space without stretching
+    the picture*/
+}
+
+.heli-card p{
+    padding: 0px 20px;
+}
+
+/*VIDEOS*/
+#videos{
+    padding: 40px 5%;
+    background-color: #d7e9f7;
+}
+
+iframe{
+    display: block;
+    margin: auto; /*Centers the video*/
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.video-link{
+    text-align: center;
+}
+
+.video-link a{
+    color: #0b3c5d;
+    font-weight: 700;
+}
+
+/*FORM*/
+#contact{
+    padding: 40px 5%;
+}
+
+form{
+    max-width: 550px;
+    margin: auto; /*Centers the form on the page*/
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+input[type="text"], input[type="email"], select, textarea{
+    width: 100%; /*Width of the inputs*/
+    margin: 10px 0px; /*Margin between the inputs*/
+    border: 2px solid #9fc5e0; /*Border of the inputs*/
+    border-radius: 8px; /*Border radius of the inputs*/
+    padding: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box; /*Keeps padding and border inside
+    the 100% width*/
+    transition: border-color 0.3s ease;
+}
+
+/*Darkens the border when the user clicks into a box*/
+input[type="text"]:focus, input[type="email"]:focus, select:focus, textarea:focus{
+    border-color: #0b3c5d;
+    outline: none;
+}
+
+textarea{
+    height: 150px;
+    resize: vertical;
+}
+
+.checkbox-row{
+    margin: 10px 0px;
+    font-size: 16px;
+}
+
+input[type="submit"]{
+    width: 100%;
+    margin-top: 10px;
+    background-color: #0b3c5d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover{
+    background-color: #f5a623;
+    color: #0b3c5d;
+}
+
+/*FOOTER*/
+footer{
+    background-color: #0b3c5d;
+    border-top: 4px solid #f5a623;
+    margin-top: 40px;
+}
+
+table{
+    width: 100%;
+}
+
+td{
+    width: 33%; /*Each item takes up 1/3 of the footer*/
+    text-align: center;
+}
+
+td p{
+    color: white;
+    font-size: 16px;
+}
